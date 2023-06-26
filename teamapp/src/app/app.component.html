@@ -5,20 +5,21 @@
     </h1>
     <ul class="list-of-teams">
      <!-- dynamically rendered with structural directives-->
-
+      <li *ngFor="let member of members">{{member}}</li>
     </ul>
     <div class="labels">
       <div>
     <label htmlFor="inputNameTeams">Name:</label>
     <input 
     #inputNameTeams
-    type="text" placeholder="Team Name"
+    type="text" placeholder="Team Member"
     (input)="onInput(inputNameTeams.value)"
+    [value]="newMemberName"
     />
     <button (click)="addMember()">Add</button>
   </div>
   <div>
-    <label htmlFor="inputNumbTeams">Number of teams:</label>
+    <label htmlFor="inputNumbTeams">Number of members in teams:</label>
     <input id="inputNumbTeams" type="text" placeholder="#"/>
     <button>Generate</button>
   </div>
