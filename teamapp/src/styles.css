@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: aliceblue;
+  margin: 0 auto;
+  padding:5rem;
+}
+
+main{
+  display:flex;
+  flex-direction: column;
+  padding:3rem;
+  width:80vw;
+
+  background-color: black;
+  color:wheat;
+  align-items: center;
+}

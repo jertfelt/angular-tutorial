@@ -1,0 +1,9 @@
+Komponent:
+Varje komponent består:
+HTML template
+Typescript class
+CSS selector
+CSS styles (optional)
+
+Komponent ska finnas i en NGO modul
+
