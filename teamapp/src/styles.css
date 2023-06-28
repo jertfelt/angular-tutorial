@@ -17,3 +17,7 @@ main{
   color:wheat;
   align-items: center;
 }
+
+.error{
+  color:salmon;
+}

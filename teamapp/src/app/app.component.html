@@ -6,6 +6,8 @@
     <ul class="list-of-teams">
      <!-- dynamically rendered with structural directives-->
       <li *ngFor="let member of members">{{member}}</li>
+      <p *ngIf="errorMessage" 
+      class="error">{{errorMessage}}</p>
     </ul>
     <div class="labels">
       <div>
@@ -25,5 +27,5 @@
   </div>
   
   </div>
-  <p class="error">{{errorMessage}}</p>
+
   </main>

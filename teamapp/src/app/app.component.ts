@@ -17,7 +17,7 @@ export class AppComponent {
   addMember(){
     if(!this.newMemberName)
     {
-      this.errorMessage = "Namn får ej vara tomt"
+      this.errorMessage = "Namn får ej vara tomt!"
       return;
     }
     this.errorMessage=""

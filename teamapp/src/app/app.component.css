@@ -9,6 +9,12 @@ h1{
   padding:3rem;
   color: black;
   list-style: none;
+  min-height:50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 .labels{
   margin-top:2rem;
