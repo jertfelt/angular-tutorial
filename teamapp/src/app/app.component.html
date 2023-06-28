@@ -1,31 +1,54 @@
 
-  <main>
+<meta charset="UTF-8">
+ <main>
     <h1>
-      Team Generator
+      Generera lag
     </h1>
     <ul class="list-of-teams">
-     <!-- dynamically rendered with structural directives-->
-      <li *ngFor="let member of members">{{member}}</li>
+      <li *ngFor="let member of members; let i=index">
+        <span>
+          {{member}}
+   </span>
+      </li>
       <p *ngIf="errorMessage" 
       class="error">{{errorMessage}}</p>
     </ul>
     <div class="labels">
       <div>
-    <label htmlFor="inputNameTeams">Name:</label>
+    <label htmlFor="inputNameTeams">Namn:</label>
     <input 
     #inputNameTeams
-    type="text" placeholder="Team Member"
+    type="text"
+    placeholder="Lagkamrat"
     (input)="onInput(inputNameTeams.value)"
     [value]="newMemberName"
     />
     <button (click)="addMember()">Add</button>
   </div>
   <div>
-    <label htmlFor="inputNumbTeams">Number of members in teams:</label>
-    <input id="inputNumbTeams" type="text" placeholder="#"/>
-    <button>Generate</button>
+    <label htmlFor="inputNumbTeams">Hur många lag?</label>
+    <input #inputNumbTeams
+    (input)="onNumberTeamsInput(inputNumbTeams.value)" 
+    [value]="nuTeams"
+    type="text" 
+    placeholder="Antal"/>
+    <button (click)="generateTeams()"
+    class="generateBtn">
+    Generera</button>
   </div>
   
+  </div>
+  <div 
+  *ngIf="teams.length"
+  class="team-content">
+    <h2>Laguppställning:</h2>
+    <app-team
+    *ngFor="let team of teams;
+    let i=index"
+    [team] = "team"
+    [index] = "i">
+    </app-team>
+    
   </div>
 
   </main>

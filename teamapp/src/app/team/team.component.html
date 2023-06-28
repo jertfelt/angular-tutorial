@@ -1,0 +1,21 @@
+<ul class="team-list"
+>
+  <li>
+  <h3 *ngIf="index %2 !== 0"
+  class="uneven">
+  Lag {{index +1}} </h3>
+  <h3 *ngIf="index %2 === 0"
+  class="even">
+  Lag {{index +1}}</h3>
+  <ul>
+    <li *ngFor="let member of team"
+    >
+    <span>
+    <p> {{member}} </p>
+    <p 
+    role="img" aria-label="kiwi">🥝</p>
+  </span>
+    </li>
+  </ul>
+</li>
+</ul>
